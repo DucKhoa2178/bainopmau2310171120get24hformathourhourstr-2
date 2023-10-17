@@ -44,7 +44,7 @@ get_24hformat_hour('11 PM')            | 23                     | 12
 def get_24hformat_hour(hour_str):
     for ii in hour_str:
       if 'a' in ii or 'A' in ii:
-        return hour_str.replace(' ','').replace('am','').replace('pm','').replace('AM','').replace('PM','')
+        return str(hour_str.replace(' ','').replace('am','').replace('pm','').replace('AM','').replace('PM',''))
       elif 'p' in ii or 'P' in ii:
         return str(int(hour_str.replace(' ','').replace('am','').replace('pm','').replace('AM','').replace('PM','')) + 12)
     
